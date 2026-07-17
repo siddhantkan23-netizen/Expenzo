@@ -2,7 +2,7 @@ name: Build iOS App
 
 on:
   push:
-    branches: [ main ] # Triggers the build every time you save code to 'main'
+    branches: [ main ]
 
 jobs:
   build:
@@ -17,11 +17,14 @@ jobs:
       with:
         node-version: 18
 
+    # CHANGE THIS STEP BELOW 👇
     - name: Install Web Dependencies
-      run: npm install
+      run: |
+        rm -rf node_modules package-lock.json
+        npm install --include=optional
 
     - name: Build Web App
-      run: npm run build # Changes this to your framework's build command if needed (e.g., ionic build)
+      run: npm run build
 
     - name: Sync Capacitor iOS
       run: npx cap sync ios
