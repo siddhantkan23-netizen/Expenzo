@@ -358,7 +358,7 @@ export default function App() {
                 transition={{ duration: 0.25, ease: "easeOut" }}
                 className="w-full max-w-full mx-auto"
               >
-                {activeTab === "dashboard" && <Dashboard expenses={expenses} budget={budget} onUpdateBudget={handleUpdateBudget} />}
+                {activeTab === "dashboard" && <Dashboard expenses={expenses} budget={budget} onUpdateBudget={handleUpdateBudget} onDelete={deleteExpense} />}
                 {activeTab === "categories" && <Categories expenses={expenses} />}
                 {activeTab === "history" && <ExpenseList expenses={expenses} onDelete={deleteExpense} />}
                 {activeTab === "charts" && <Charts expenses={expenses} />}
