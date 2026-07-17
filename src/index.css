@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --neo-bg: #e6e9ef;
+  --neo-shadow-dark: #c8cbd1;
+  --neo-shadow-light: #ffffff;
+}
+
+.dark {
+  --neo-bg: #1e293b;
+  --neo-shadow-dark: #121924;
+  --neo-shadow-light: #2a3952;
+}
+
+body {
+  background-color: var(--neo-bg);
+}
+
+@layer utilities {
+  .neo-bg {
+    background-color: var(--neo-bg);
+  }
+  .neo-shadow {
+    box-shadow: 8px 8px 16px var(--neo-shadow-dark), -8px -8px 16px var(--neo-shadow-light);
+  }
+  .neo-shadow-sm {
+    box-shadow: 4px 4px 8px var(--neo-shadow-dark), -4px -4px 8px var(--neo-shadow-light);
+  }
+  .neo-inner {
+    box-shadow: inset 6px 6px 10px var(--neo-shadow-dark), inset -6px -6px 10px var(--neo-shadow-light);
+  }
+  .neo-inner-sm {
+    box-shadow: inset 3px 3px 6px var(--neo-shadow-dark), inset -3px -3px 6px var(--neo-shadow-light);
+  }
+}
+
+.pb-safe {
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+}
