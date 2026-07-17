@@ -340,9 +340,6 @@ export default function App() {
                     <button onClick={() => window.open('/android-expenzo.apk', '_blank')} className="px-4 py-2 neo-bg text-amber-600 text-xs font-bold rounded-xl neo-shadow active:neo-inner">
                       Install Android App
                     </button>
-                    <button className="px-4 py-2 neo-bg text-amber-600 text-xs font-bold rounded-xl neo-shadow active:neo-inner">
-                      Install iOS App
-                    </button>
                  </div>
                </div>
              )}
