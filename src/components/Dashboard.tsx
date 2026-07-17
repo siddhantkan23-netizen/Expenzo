@@ -44,14 +44,14 @@ export default function Dashboard({ expenses, budget, onUpdateBudget, onDelete }
             <ArrowDownRight className="w-5 h-5" />
           </div>
           <p className="text-[10px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-widest mb-1">Total Income</p>
-          <h3 className="text-xl font-bold text-slate-700 dark:text-slate-100 tracking-tight">{formatCurrency(totalIncome)}</h3>
+          <h3 className="text-xl font-bold text-white-700 dark:text-slate-100 tracking-tight">{formatCurrency(totalIncome)}</h3>
         </div>
         <div className="neo-bg p-5 rounded-3xl neo-shadow transition-all duration-300 group">
           <div className="w-10 h-10 rounded-2xl neo-shadow flex items-center justify-center mb-4 text-rose-500">
             <ArrowUpRight className="w-5 h-5" />
           </div>
           <p className="text-[10px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-widest mb-1">Total Spent</p>
-          <h3 className="text-xl font-bold text-slate-700 dark:text-slate-100 tracking-tight">{formatCurrency(totalSpent)}</h3>
+          <h3 className="text-xl font-bold text-white-700 dark:text-slate-100 tracking-tight">{formatCurrency(totalSpent)}</h3>
         </div>
       </div>
 
@@ -62,7 +62,7 @@ export default function Dashboard({ expenses, budget, onUpdateBudget, onDelete }
             <div className="w-8 h-8 rounded-full neo-inner flex items-center justify-center">
               <Target className="w-4 h-4 text-amber-500" />
             </div>
-            <h3 className="font-bold text-slate-700 dark:text-slate-100">Monthly Budget</h3>
+            <h3 className="font-bold text-white-700 dark:text-slate-100">Monthly Budget</h3>
             {isOverBudget && (
               <span className="ml-2 text-[10px] font-bold px-2 py-1 bg-rose-100 text-rose-600 rounded-lg">OVER BUDGET</span>
             )}
@@ -104,7 +104,7 @@ export default function Dashboard({ expenses, budget, onUpdateBudget, onDelete }
               type="number"
               value={tempBudget}
               onChange={(e) => setTempBudget(e.target.value)}
-              className="w-full px-4 py-3 neo-bg rounded-xl neo-inner outline-none text-slate-700 dark:text-slate-100 font-medium transition-all"
+              className="w-full px-4 py-3 neo-bg rounded-xl neo-inner outline-none text-white-700 dark:text-slate-100 font-medium transition-all"
               placeholder="Enter budget amount"
               autoFocus
               onKeyDown={(e) => {
@@ -164,7 +164,7 @@ export default function Dashboard({ expenses, budget, onUpdateBudget, onDelete }
              <Target className="w-24 h-24 text-slate-900" />
           </div>
           <div className="relative z-10">
-            <h3 className="font-bold text-slate-700 dark:text-slate-100 tracking-tight mb-2">Monthly Insight</h3>
+            <h3 className="font-bold text-white-700 dark:text-slate-100 tracking-tight mb-2">Monthly Insight</h3>
             <p className="text-sm text-slate-500 dark:text-slate-300 font-medium leading-relaxed">
               You have spent <strong>{formatCurrency(totalSpent)}</strong> this month across <strong>{expenses.length}</strong> transactions. 
               {isOverBudget 
@@ -178,7 +178,7 @@ export default function Dashboard({ expenses, budget, onUpdateBudget, onDelete }
       {/* Recent Activity Mini */}
       <div className="neo-bg rounded-3xl neo-shadow p-6 transition-all duration-300">
         <div className="flex justify-between items-center mb-5">
-          <h3 className="font-bold text-slate-700 dark:text-slate-100 tracking-tight">Recent Transactions</h3>
+          <h3 className="font-bold text-white-700 dark:text-slate-100 tracking-tight">Recent Transactions</h3>
           <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 neo-inner px-2.5 py-1 rounded-full">Last 3</span>
         </div>
         {recentExpenses.length > 0 ? (
@@ -188,12 +188,12 @@ export default function Dashboard({ expenses, budget, onUpdateBudget, onDelete }
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full neo-inner group-hover:bg-amber-400 transition-colors"></div>
                   <div>
-                    <p className="text-sm font-semibold text-slate-700 dark:text-slate-100 tracking-tight">{expense.description || expense.category}</p>
+                    <p className="text-sm font-semibold text-white-700 dark:text-slate-100 tracking-tight">{expense.description || expense.category}</p>
                     <p className="text-[11px] font-medium text-slate-400 dark:text-slate-400 mt-0.5">{format(new Date(expense.date), "MMM dd")}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="text-sm font-bold text-slate-700 dark:text-slate-100 tracking-tight">{formatCurrency(expense.amount)}</span>
+                  <span className="text-sm font-bold text-white-700 dark:text-slate-100 tracking-tight">{formatCurrency(expense.amount)}</span>
                   <button
                     onClick={() => onDelete(expense.id)}
                     className="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 dark:text-slate-400 hover:text-rose-500 hover:neo-inner transition-all md:opacity-0 group-hover:opacity-100 focus:opacity-100"

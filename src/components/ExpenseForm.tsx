@@ -45,7 +45,7 @@ export default function ExpenseForm({ onAdd }: ExpenseFormProps) {
             className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${
               type === "expense" 
                 ? "neo-bg neo-shadow text-amber-600" 
-                : "text-slate-500 hover:text-slate-700"
+                : "text-slate-500 hover:text-white-700 "
             }`}
           >
             Expense
@@ -56,7 +56,7 @@ export default function ExpenseForm({ onAdd }: ExpenseFormProps) {
             className={`flex-1 py-2 rounded-lg text-sm font-bold transition-all ${
               type === "income" 
                 ? "neo-bg neo-shadow text-emerald-600" 
-                : "text-slate-500 hover:text-slate-700"
+                : "text-slate-500 hover:text-white-700 "
             }`}
           >
             Income
@@ -75,7 +75,7 @@ export default function ExpenseForm({ onAdd }: ExpenseFormProps) {
               required
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              className="w-full pl-11 pr-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-slate-700 text-lg placeholder:text-slate-400 focus:text-amber-600"
+              className="w-full pl-11 pr-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-white-700 text-lg placeholder:text-slate-400 focus:text-amber-600"
               placeholder="0.00"
               autoFocus
             />
@@ -88,7 +88,7 @@ export default function ExpenseForm({ onAdd }: ExpenseFormProps) {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value as any)}
-              className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all appearance-none font-semibold text-slate-700 focus:text-amber-600"
+              className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all appearance-none font-semibold text-white-700 focus:text-amber-600"
             >
               {CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>
@@ -105,7 +105,7 @@ export default function ExpenseForm({ onAdd }: ExpenseFormProps) {
               required
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-slate-700 focus:text-amber-600"
+              className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-white-700 focus:text-amber-600"
             />
           </div>
         </div>
@@ -121,7 +121,7 @@ export default function ExpenseForm({ onAdd }: ExpenseFormProps) {
               required
               value={customCategory}
               onChange={(e) => setCustomCategory(e.target.value)}
-              className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400 focus:text-amber-600"
+              className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-medium text-white-700 placeholder:text-slate-400 focus:text-amber-600"
               placeholder="e.g. Subscriptions"
             />
           </motion.div>
@@ -133,7 +133,7 @@ export default function ExpenseForm({ onAdd }: ExpenseFormProps) {
             type="text"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-medium text-slate-700 placeholder:text-slate-400 focus:text-amber-600"
+            className="w-full px-4 py-3.5 neo-bg neo-inner rounded-2xl outline-none transition-all font-medium text-white-700 placeholder:text-slate-400 focus:text-amber-600"
             placeholder="e.g. Lunch with friends"
           />
         </div>

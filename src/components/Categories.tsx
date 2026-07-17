@@ -27,7 +27,7 @@ const getCategoryColor = (category: string) => {
     case "Entertainment": return "bg-purple-100 text-purple-700";
     case "Shopping": return "bg-pink-100 text-pink-700";
     case "Health": return "bg-rose-100 text-rose-700";
-    default: return "bg-slate-100 text-slate-700";
+    default: return "bg-slate-100 text-white-700 ";
   }
 };
 
@@ -51,7 +51,7 @@ export default function Categories({ expenses }: CategoriesProps) {
         <div className="w-16 h-16 neo-inner rounded-2xl flex items-center justify-center mb-4 text-slate-400">
           <Grid className="w-8 h-8" />
         </div>
-        <h2 className="text-xl font-bold text-slate-700 mb-2 tracking-tight">No categories yet</h2>
+        <h2 className="text-xl font-bold text-white-700 mb-2 tracking-tight">No categories yet</h2>
         <p className="text-slate-500 text-sm font-medium">Add some expenses to see your categories.</p>
       </div>
     );
@@ -77,8 +77,8 @@ export default function Categories({ expenses }: CategoriesProps) {
                 </div>
                 <div className="flex-1">
                   <div className="flex justify-between items-center mb-1">
-                    <h3 className="font-bold text-slate-700 tracking-tight">{category.name}</h3>
-                    <span className="font-bold text-slate-700">{formatCurrency(category.value)}</span>
+                    <h3 className="font-bold text-white-700 tracking-tight">{category.name}</h3>
+                    <span className="font-bold text-white-700 ">{formatCurrency(category.value)}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <p className="text-[11px] text-slate-400 font-medium tracking-wide uppercase">{category.count} {category.count === 1 ? 'transaction' : 'transactions'}</p>

@@ -142,7 +142,7 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen neo-bg text-slate-700 dark:text-slate-100 font-sans selection:bg-amber-100 selection:text-amber-900 pb-24 md:pb-0">
+    <div className="min-h-screen neo-bg text-white-700  dark:text-slate-100 font-sans selection:bg-amber-100 selection:text-amber-900 pb-24 md:pb-0">
       <div className="w-full mx-auto md:flex md:h-screen neo-bg min-h-screen md:min-h-0 relative overflow-hidden">
         
         {/* Navigation - Bottom on mobile, Side on desktop */}
@@ -211,14 +211,14 @@ export default function App() {
               <div className="w-12 h-12 rounded-full neo-shadow flex items-center justify-center text-amber-500">
                 <Cat className="w-6 h-6" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-slate-700 dark:text-slate-100">Neko Ledger</span>
+              <span className="text-xl font-bold tracking-tight text-white-700  dark:text-slate-100">Neko Ledger</span>
             </div>
             
             <div className="flex-1 space-y-4 px-2">
               <button
                 onClick={() => setActiveTab("dashboard")}
                 className={`w-full flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 ${
-                  activeTab === "dashboard" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:text-slate-100 font-medium active:neo-inner-sm"
+                  activeTab === "dashboard" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-white-700  dark:text-slate-100 font-medium active:neo-inner-sm"
                 }`}
               >
                 <LayoutDashboard className="w-5 h-5" />
@@ -227,7 +227,7 @@ export default function App() {
               <button
                 onClick={() => setActiveTab("categories")}
                 className={`w-full flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 ${
-                  activeTab === "categories" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:text-slate-100 font-medium active:neo-inner-sm"
+                  activeTab === "categories" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-white-700  dark:text-slate-100 font-medium active:neo-inner-sm"
                 }`}
               >
                 <Grid className="w-5 h-5" />
@@ -236,7 +236,7 @@ export default function App() {
               <button
                 onClick={() => setActiveTab("history")}
                 className={`w-full flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 ${
-                  activeTab === "history" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:text-slate-100 font-medium active:neo-inner-sm"
+                  activeTab === "history" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-white-700  dark:text-slate-100 font-medium active:neo-inner-sm"
                 }`}
               >
                 <Receipt className="w-5 h-5" />
@@ -245,7 +245,7 @@ export default function App() {
               <button
                 onClick={() => setActiveTab("charts")}
                 className={`w-full flex items-center gap-4 px-4 py-3 rounded-2xl transition-all duration-300 ${
-                  activeTab === "charts" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:text-slate-100 font-medium active:neo-inner-sm"
+                  activeTab === "charts" ? "neo-inner text-amber-600 font-bold" : "neo-bg neo-shadow-sm text-slate-500 dark:text-slate-300 hover:text-white-700  dark:text-slate-100 font-medium active:neo-inner-sm"
                 }`}
               >
                 <PieChartIcon className="w-5 h-5" />
@@ -274,7 +274,7 @@ export default function App() {
                   <Cat className="w-5 h-5" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold tracking-tight text-slate-700 dark:text-slate-100">Neko Ledger</h1>
+                  <h1 className="text-xl font-bold tracking-tight text-white-700  dark:text-slate-100">Neko Ledger</h1>
                   <p className="text-slate-500 dark:text-slate-300 text-xs font-medium">{user.email}</p>
                 </div>
               </div>
@@ -299,7 +299,7 @@ export default function App() {
             <div className="flex justify-between items-end relative z-10">
               <div>
                 <p className="text-xs font-bold text-slate-400 dark:text-slate-400 uppercase tracking-widest mb-2">Total Balance</p>
-                <h2 className="text-5xl font-light tracking-tight text-slate-700 dark:text-slate-100">{formatCurrency(totalExpenses)}</h2>
+                <h2 className="text-5xl font-light tracking-tight text-white-700  dark:text-slate-100">{formatCurrency(totalExpenses)}</h2>
               </div>
               <div className="hidden md:flex flex-col items-end">
                 <p className="text-slate-500 dark:text-slate-300 text-sm font-medium mb-4">{user.email}</p>
@@ -332,12 +332,12 @@ export default function App() {
                        <Cat className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-700 dark:text-slate-100 text-sm">Install Neko Ledger</h4>
+                      <h4 className="font-bold text-white-700  dark:text-slate-100 text-sm">Install Neko Ledger</h4>
                       <p className="text-xs text-slate-500 dark:text-slate-300 font-medium">Get the Android or iOS app for the best experience.</p>
                     </div>
                  </div>
                  <div className="flex gap-2">
-                    <button className="px-4 py-2 neo-bg text-amber-600 text-xs font-bold rounded-xl neo-shadow active:neo-inner">
+                    <button onClick={() => window.open('/android-expenzo.apk', '_blank')} className="px-4 py-2 neo-bg text-amber-600 text-xs font-bold rounded-xl neo-shadow active:neo-inner">
                       Install Android App
                     </button>
                     <button className="px-4 py-2 neo-bg text-amber-600 text-xs font-bold rounded-xl neo-shadow active:neo-inner">
@@ -384,7 +384,7 @@ export default function App() {
                 className="neo-bg w-full max-w-md rounded-t-[2rem] sm:rounded-3xl shadow-2xl overflow-hidden border border-white/50"
               >
                 <div className="p-5 flex justify-between items-center border-b border-slate-200/50 dark:border-slate-700/50">
-                  <h3 className="font-bold text-xl px-2 text-slate-700 dark:text-slate-100">New Transaction</h3>
+                  <h3 className="font-bold text-xl px-2 text-white-700  dark:text-slate-100">New Transaction</h3>
                   <button 
                     onClick={() => setIsAddModalOpen(false)}
                     className="p-2.5 neo-bg rounded-full text-slate-500 dark:text-slate-300 hover:text-amber-500 neo-shadow transition-all active:neo-inner"

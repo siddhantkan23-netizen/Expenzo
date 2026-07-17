@@ -64,7 +64,7 @@ export default function Charts({ expenses }: ChartsProps) {
         <div className="w-16 h-16 neo-inner rounded-2xl flex items-center justify-center mb-4 text-slate-400">
           <PieChartIcon className="w-8 h-8" />
         </div>
-        <h2 className="text-xl font-bold text-slate-700 mb-2 tracking-tight">No data yet</h2>
+        <h2 className="text-xl font-bold text-white-700 mb-2 tracking-tight">No data yet</h2>
         <p className="text-slate-500 text-sm font-medium">Add some expenses to see your charts.</p>
       </div>
     );
@@ -78,12 +78,12 @@ export default function Charts({ expenses }: ChartsProps) {
     >
       <div className="neo-bg p-6 rounded-3xl neo-shadow flex flex-col">
         <div className="flex justify-between items-center mb-6">
-          <h3 className="font-bold text-slate-700 tracking-tight">Expenses by Category</h3>
+          <h3 className="font-bold text-white-700 tracking-tight">Expenses by Category</h3>
         </div>
         <div className="h-64 relative">
           <div className="absolute inset-0 flex items-center justify-center flex-col pointer-events-none">
             <span className="text-xs font-semibold text-slate-400 tracking-wider uppercase">Total</span>
-            <span className="text-xl font-bold text-slate-700">{formatCurrency(expenses.reduce((a, b) => a + b.amount, 0))}</span>
+            <span className="text-xl font-bold text-white-700 ">{formatCurrency(expenses.reduce((a, b) => a + b.amount, 0))}</span>
           </div>
           <ResponsiveContainer width="100%" height="100%">
             <PieChart>
@@ -113,14 +113,14 @@ export default function Charts({ expenses }: ChartsProps) {
           {categoryData.slice(0, 6).map((cat, i) => (
             <div key={cat.name} className="flex items-center gap-2.5 text-sm p-2 rounded-xl hover:neo-inner transition-all">
               <span className="w-3.5 h-3.5 rounded-full neo-shadow flex-shrink-0" style={{ backgroundColor: COLORS[i % COLORS.length] }}></span>
-              <span className="text-slate-700 font-medium truncate flex-1">{cat.name}</span>
+              <span className="text-white-700 font-medium truncate flex-1">{cat.name}</span>
             </div>
           ))}
         </div>
       </div>
 
       <div className="neo-bg p-6 rounded-3xl neo-shadow flex flex-col">
-        <h3 className="font-bold mb-6 text-slate-700 tracking-tight">Monthly Report</h3>
+        <h3 className="font-bold mb-6 text-white-700 tracking-tight">Monthly Report</h3>
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={monthlyData} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
@@ -154,7 +154,7 @@ export default function Charts({ expenses }: ChartsProps) {
       </div>
 
       <div className="neo-bg p-6 rounded-3xl neo-shadow flex flex-col">
-        <h3 className="font-bold mb-6 text-slate-700 tracking-tight">Recent Spending</h3>
+        <h3 className="font-bold mb-6 text-white-700 tracking-tight">Recent Spending</h3>
         <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={dateData} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>

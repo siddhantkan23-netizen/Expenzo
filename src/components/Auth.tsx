@@ -65,7 +65,7 @@ export default function Auth({ onLogin }: AuthProps) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-700 dark:text-slate-100 tracking-tight mb-4 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white-700 dark:text-slate-100 tracking-tight mb-4 text-center md:text-left">
             {isLogin ? "Welcome back!" : "Get Started"}
           </h1>
           <p className="text-slate-500 dark:text-slate-300 text-sm md:text-base font-medium leading-relaxed text-center md:text-left px-4 md:px-0 max-w-sm mx-auto md:mx-0">
@@ -93,7 +93,7 @@ export default function Auth({ onLogin }: AuthProps) {
               className={`flex-1 py-2.5 rounded-xl text-sm font-bold transition-all ${
                 isLogin 
                   ? "neo-bg neo-shadow text-amber-600" 
-                  : "text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:text-slate-100"
+                  : "text-slate-500 dark:text-slate-300 hover:text-white-700 dark:text-slate-100"
               }`}
             >
               Sign In
@@ -107,7 +107,7 @@ export default function Auth({ onLogin }: AuthProps) {
               className={`flex-1 py-2.5 rounded-xl text-sm font-bold transition-all ${
                 !isLogin 
                   ? "neo-bg neo-shadow text-amber-600" 
-                  : "text-slate-500 dark:text-slate-300 hover:text-slate-700 dark:text-slate-100"
+                  : "text-slate-500 dark:text-slate-300 hover:text-white-700 dark:text-slate-100"
               }`}
             >
               Sign Up
@@ -122,7 +122,7 @@ export default function Auth({ onLogin }: AuthProps) {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full px-5 py-4 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-slate-700 dark:text-slate-100 text-sm focus:text-amber-600 placeholder:text-slate-400 dark:text-slate-400"
+                  className="w-full px-5 py-4 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-white-700 dark:text-slate-100 text-sm focus:text-amber-600 placeholder:text-slate-400 dark:text-slate-400"
                   placeholder="Enter Full Name"
                 />
               </div>
@@ -135,7 +135,7 @@ export default function Auth({ onLogin }: AuthProps) {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-5 py-4 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-slate-700 dark:text-slate-100 text-sm focus:text-amber-600 placeholder:text-slate-400 dark:text-slate-400"
+                className="w-full px-5 py-4 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-white-700 dark:text-slate-100 text-sm focus:text-amber-600 placeholder:text-slate-400 dark:text-slate-400"
                 placeholder="Enter Email"
               />
             </div>
@@ -147,7 +147,7 @@ export default function Auth({ onLogin }: AuthProps) {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-5 py-4 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-slate-700 dark:text-slate-100 text-sm focus:text-amber-600 placeholder:text-slate-400 dark:text-slate-400"
+                className="w-full px-5 py-4 neo-bg neo-inner rounded-2xl outline-none transition-all font-semibold text-white-700 dark:text-slate-100 text-sm focus:text-amber-600 placeholder:text-slate-400 dark:text-slate-400"
                 placeholder="Enter Password"
               />
             </div>

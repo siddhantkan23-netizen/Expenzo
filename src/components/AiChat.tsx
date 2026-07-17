@@ -162,7 +162,7 @@ export default function AiChat({ expenses, budget }: AiChatProps) {
                     className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm ${
                       msg.role === "user"
                         ? "neo-bg neo-shadow text-amber-700 rounded-br-sm border border-white/30"
-                        : "neo-bg neo-inner text-slate-700 rounded-bl-sm"
+                        : "neo-bg neo-inner text-white-700 rounded-bl-sm"
                     }`}
                   >
                     <p className="whitespace-pre-wrap leading-relaxed">{msg.content}</p>
@@ -196,7 +196,7 @@ export default function AiChat({ expenses, budget }: AiChatProps) {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder="Ask about your finances..."
-                  className="flex-1 pl-4 pr-10 py-3 neo-bg neo-inner rounded-xl outline-none transition-all text-sm text-slate-700 focus:text-amber-600 placeholder:text-slate-400"
+                  className="flex-1 pl-4 pr-10 py-3 neo-bg neo-inner rounded-xl outline-none transition-all text-sm text-white-700 focus:text-amber-600 placeholder:text-slate-400"
                 />
                 <button
                   type="submit"
