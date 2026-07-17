@@ -211,7 +211,7 @@ export default function App() {
               <div className="w-12 h-12 rounded-full neo-shadow flex items-center justify-center text-amber-500">
                 <Cat className="w-6 h-6" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-white-700  dark:text-slate-100">Neko Ledger</span>
+              <span className="text-xl font-bold tracking-tight text-white-700  dark:text-slate-100">Expenzo</span>
             </div>
             
             <div className="flex-1 space-y-4 px-2">
@@ -274,7 +274,7 @@ export default function App() {
                   <Cat className="w-5 h-5" />
                 </div>
                 <div>
-                  <h1 className="text-xl font-bold tracking-tight text-white-700  dark:text-slate-100">Neko Ledger</h1>
+                  <h1 className="text-xl font-bold tracking-tight text-white-700  dark:text-slate-100">Expenzo</h1>
                   <p className="text-slate-500 dark:text-slate-300 text-xs font-medium">{user.email}</p>
                 </div>
               </div>
@@ -332,8 +332,8 @@ export default function App() {
                        <Cat className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white-700  dark:text-slate-100 text-sm">Install Neko Ledger</h4>
-                      <p className="text-xs text-slate-500 dark:text-slate-300 font-medium">Get the Android or iOS app for the best experience.</p>
+                      <h4 className="font-bold text-white-700  dark:text-slate-100 text-sm">Install Expenzo</h4>
+                      <p className="text-xs text-slate-500 dark:text-slate-300 font-medium">Get the Android app for the best experience.</p>
                     </div>
                  </div>
                  <div className="flex gap-2">
